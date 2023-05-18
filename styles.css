@@ -1,3 +1,6 @@
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Rajdhani&family=Sigmar&display=swap');
+
+
 body {
   display: flex;
   justify-content: center;
@@ -52,7 +55,7 @@ body {
 
 .dis {
   grid-area: dis;
-  background-color: aqua;
+  text-align: right;
 }
 
 .zero {
@@ -61,22 +64,33 @@ body {
 
 .ac {
   grid-area: ac;
+  background-color: #a67ea3;
 }
 
 .equal {
   grid-area: equal;
+  background-color: rgb(101, 154, 156);
 }
 
 #display {
   grid-column: span 4;
   background-color: #fff;
   border: 1px solid #ccc;
-  padding: 5px;
+  padding: 0.5rem;
+  font-size: 2rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  justify-content: right;
+}
+
+.display-text {
   text-align: right;
-  font-size: 20px;
-  font-weight: bold;
-  height: 40px;
-  margin-bottom: 10px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 4px;
+}
+
+.op{
+  background-color: rgb(163, 163, 163);
 }
 
 @media (max-width: 600px) {
