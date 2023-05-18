@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  width: 25rem;
+  width: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(6, 1fr);
   grid-gap: 1rem;
-  width: 24rem;
+  width: 28rem;
   grid-template-areas:
     "dis dis dis dis"
     "ac ac div mul"
