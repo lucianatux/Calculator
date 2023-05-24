@@ -44,28 +44,41 @@ function App() {
         setResult("");
       
     } else {
+      const prelastChar = calculation.slice(-2,-1);
       const lastChar = calculation.slice(-1);
-      if (
-        lastChar === "*" ||
-        lastChar === "/" ||
-        lastChar === "+" ||
-        lastChar === "-"
-      ) {
-        if (operator === "-" && lastChar !== "-") {
+      console.log(prelastChar + "prelastChar");
+      console.log(lastChar + "lastChar");
+      console.log(operator + "operator");
+      if(prelastChar.match(/[0-9]/)){
+        if(lastChar.match(/[*\/\-+]/)){
+          if(operator === "-"){
+            setCalculation((prevCalculation) => prevCalculation + operator);
+          }else{
+            setCalculation(
+              (prevCalculation) => prevCalculation.slice(0, -1) + operator
+            );
+          }
+        }else{
           setCalculation((prevCalculation) => prevCalculation + operator);
-        } else {
-          setCalculation(
-            (prevCalculation) => prevCalculation.slice(0, -1) + operator
-          );
         }
-      } else {
-       
+      }else{
+        if(lastChar.match(/[*\/\-+]/)){
+          if(operator === "-"){
+            setCalculation(
+              (prevCalculation) => prevCalculation.slice(0, -1) + operator
+            );
+          }else{
+            setCalculation(
+              (prevCalculation) => prevCalculation.slice(0, -2) + operator
+            );
+          }
+        }else{
           setCalculation((prevCalculation) => prevCalculation + operator);
-        
+        }
+
       }
     }
   };
-
   
   
 
